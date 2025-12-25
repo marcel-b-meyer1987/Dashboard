@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.grid-container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1`fr 4fr;
+    grid-template-areas: 
+    "sb sb h h h h h h h h h h"
+    "sb sb m m m m m m m m m m";
+    gap: 5px;
+}
+
+.grid-container > * {
+    border: 2px solid black;
+}
+
+.sidebar {
+    background-color: rgb(53, 156, 240);
+    grid-area: sb;
+}
+
+header {
+    grid-area: h;
+}
+
+main {
+    grid-area: m;
+}
