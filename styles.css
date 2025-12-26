@@ -33,13 +33,24 @@ body {
     grid-area: sb;
     padding: 10px;
     display: grid;
-    justify-content: start;
+    justify-content: center;
+    align-content: start;
 }
 
 .sidebar li {
     list-style-type: none;
+    text-transform: capitalize;
+    min-height: 30px;
+    font-size: larger;
+    font-weight: 600;
+    padding: 10px;
 }
 
+.sidebar h1 {
+    text-transform: uppercase;
+    padding: 10px;
+    margin-bottom: 20px;
+}
 
 header {
     grid-area: h;
