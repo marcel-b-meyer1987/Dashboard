@@ -220,8 +220,25 @@ main h2 {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
     margin-top: 24px;
+}
+
+
+.project-card > .project-actions > img {
+    transition: scale 100ms ease-out;
+    transition: translate 200ms ease-in-out;
+}
+
+.project-card > .project-actions > img:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
+
+.project-card > .project-actions > img:active {
+    scale: 1.5;
+    translate: 0 -10px;
+    cursor: pointer;
 }
 
 .main-right {
