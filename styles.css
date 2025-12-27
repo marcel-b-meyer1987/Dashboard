@@ -256,6 +256,8 @@ main h2 {
 
 .announcements {
     display: grid;
+    overflow-y: auto;
+    overflow-x: hidden;
     background-color: white;
     padding: 10px;
     border: none;
@@ -289,6 +291,8 @@ main h2 {
     display: grid;
     justify-content: center;
     align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
     background-color: white;
     padding: 5px;
     border: none;
