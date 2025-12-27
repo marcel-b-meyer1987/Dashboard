@@ -4,6 +4,7 @@
     box-sizing: border-box;
 
     --sidebar-min-width: 50px;
+    --grey-bg-color: rgb(219, 220, 222);
 }
 
 body {
@@ -20,7 +21,6 @@ body {
     grid-template-areas: 
     "sb h h h h h h h h h h h"
     "sb m m m m m m m m m m m";
-    gap: 5px;
 }
 
 .grid-container * {
@@ -50,12 +50,26 @@ body {
 }
 
 .sidebar li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
     list-style-type: none;
     text-transform: capitalize;
     min-height: 30px;
     font-size: larger;
     font-weight: 600;
     padding: 10px;
+    transition: scale 100ms ease-out;
+}
+
+.sidebar li:hover {
+    gap: 16px;
+    cursor: pointer;
+}
+
+.sidebar li:active {
+    scale: 1.1;
 }
 
 .sidebar h1 {
@@ -67,6 +81,11 @@ body {
 .icons {
     height: 16px;
     aspect-ratio: 1/1;
+}
+
+.icons img svg path {
+    fill: white;
+    stroke: white;
 }
 
 header {
@@ -85,6 +104,16 @@ header button {
     border: none;
     border-radius: 25px;
     cursor: pointer;
+    transition: scale 100ms ease-out;
+    transition: translate 200ms ease-in-out;
+}
+
+header button:hover {
+    translate: 0px -5px;
+}
+
+header button:active {
+    scale: 1.1;
 }
 
 .sub-header-1 {
@@ -105,9 +134,10 @@ header button {
 .sub-header-1 input[type="search"] {
     flex-shrink: 1;
     flex-grow: 1;
+    max-width: 85%;
     line-height: 1.25em;
     font-size: 1.25em;
-    background-color: rgb(183, 204, 225);
+    background-color: var(--grey-bg-color);
     border-radius: 35px;
     border: none;
     padding: 4px 12px;
@@ -147,7 +177,7 @@ header button {
 main {
     grid-area: m;
     padding: 10px;
-    background-color: rgb(183, 204, 225);
+    background-color: var(--grey-bg-color);
     display: grid;
     grid-template-columns: 2fr 1fr; 
     grid-template-areas: "l r";
@@ -172,9 +202,26 @@ main h2 {
 
 .project-card {
     background-color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 15px;
+    padding: 32px 24px;
+    border-left: 8px solid gold;
+    border-radius: 8px;
+}
+
+.project-card > h3 {
+    text-transform: capitalize;
+}
+
+.project-card > p {
+    color: rgb(135, 133, 133);
+    margin-top: 8px;
+}
+
+.project-card > .project-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 32px;
+    margin-top: 24px;
 }
 
 .main-right {
@@ -185,12 +232,10 @@ main h2 {
 .announcements {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-
     background-color: white;
     padding: 10px;
     border: none;
     border-radius: 15px;
-
     height: 150px;
 }
 
@@ -205,3 +250,9 @@ main h2 {
 
     height: 250px;
 }
+
+/* 
+
+ROBERT MEYER
+
+*/
