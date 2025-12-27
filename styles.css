@@ -180,14 +180,14 @@ main {
     padding: 10px;
     background-color: var(--grey-bg-color);
     display: grid;
-    grid-template-columns: 2fr 1fr; 
+    grid-template-columns: 3fr 1fr; 
     grid-template-areas: "l r";
     gap: 0px;
 }
 
 main h2 {
-    margin-top: 24px;
     margin-bottom: 12px;
+    margin-block-start: 1em;
 }
 
 .main-left {
@@ -303,7 +303,8 @@ main h2 {
     gap: 12px;
     background-color: white;
     font-size: smaller;
-    padding: 18px 24px;
+    padding: 4px 24px;
+    margin-bottom: 4px;
     border: none;
     transition: all 150ms ease-in-out;
 }
