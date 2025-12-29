@@ -327,10 +327,33 @@ main h2 {
 
     header {
     grid-area: h;
-    padding: 10px 72px 10px 48px;
+    padding: 1rem 2rem 1rem 1rem;
     display: grid;
     grid-template-rows: 1fr;
-    gap: 2rem;
+    gap: 1rem;
+    box-shadow: none;
+    }
+
+    .sub-header-1 > form {
+    flex-grow:1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    max-width: clamp(150px, 85%, 33vw);
+    }
+
+    .sub-header-1 input[type="search"] {
+    flex-shrink: 1;
+    flex-grow: 1;
+    max-width: 85%;
+    line-height: 1.25em;
+    font-size: 1.25em;
+    background-color: var(--grey-bg-color);
+    border-radius: 35px;
+    border: none;
+    padding: 4px 12px;
+    max-width: clamp(150px, 85%, 33vw);
     }
 
     .greeting {
