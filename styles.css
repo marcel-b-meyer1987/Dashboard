@@ -334,6 +334,11 @@ main h2 {
     box-shadow: none;
     }
 
+    .sub-header-1 {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
     .sub-header-1 > form {
     flex-grow:1;
     display: flex;
@@ -358,6 +363,37 @@ main h2 {
 
     .greeting {
         display: none;
+    }
+
+    .sub-header-2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    }
+
+    header button {
+    background-color: rgb(53, 156, 240);
+    color: white;
+    font-size: small;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: scale 100ms ease-out;
+    }
+
+    .social-media-buttons {
+        gap: 0.5rem;
+    }
+
+    header button:hover {
+    
+    }
+
+    header button:active {
+    scale: 1.1;
     }
     
     main {
