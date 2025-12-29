@@ -323,6 +323,33 @@ main h2 {
     margin-top: 8px;
 }
 
+@media(max-width: 900px) {
+
+    header {
+    grid-area: h;
+    padding: 10px 72px 10px 48px;
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    }
+
+    .greeting {
+        display: none;
+    }
+    
+    main {
+    grid-area: m;
+    padding: 10px;
+    background-color: var(--grey-bg-color);
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-areas:
+        "l"
+        "r";
+    gap: 0px;
+    }
+    
+}
 
 
 /* 
